@@ -22,5 +22,17 @@ public class A_if {
         }
 
         System.out.println("=====================");
+
+        System.out.println("아내: 여보 우유 하나 사와. 만약 아보카도 있으면 6개 사와");
+        int milkCnt = 1;
+
+        System.out.print("아보카도가 있나요? :");
+        boolean exists = sc.nextBoolean();
+        
+        if(exists){
+            milkCnt = 6;
+        }
+
+        System.out.println("남편: 우유 " + milkCnt + "개 사왔어" );
     }
 }
