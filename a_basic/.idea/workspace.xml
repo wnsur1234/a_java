@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8786a70-af60-4186-864a-b8469dc6a354" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/d_control/B_ifelse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/d_control/C_ifelseif.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/d_control/z_quiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/e_modulization/A_module.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/grepp/basic/d_control/A_if.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/grepp/basic/d_control/A_if.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/grepp/basic/d_control/z_quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/grepp/basic/d_control/z_quiz.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +112,7 @@
       <workItem from="1741073470479" duration="1749000" />
       <workItem from="1741077643540" duration="1819000" />
       <workItem from="1741133085819" duration="14841000" />
-      <workItem from="1741148526865" duration="15747000" />
+      <workItem from="1741148526865" duration="16692000" />
     </task>
     <servers />
   </component>

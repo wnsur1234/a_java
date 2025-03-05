@@ -19,32 +19,4 @@ public class z_quiz {
         System.out.print("2P : ");
         String p2 = sc.next();
     }
-
-
-
-
-
-
-    private static void game() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("1P :" );
-        String p1 = sc.next();
-        System.out.print("2P : ");
-        String p2 = sc.next();
-
-        if(p1.equals(p2)) {
-            System.out.println("비겼습니다.");
-            return;
-        }
-
-        if(p1.equals("가위") && p2.equals("보")) {
-            System.out.println("이겼습니다.");
-        }else if (p1.equals("바위") && p2.equals("가위")) {
-            System.out.println("이겼습니다.");
-        }else if(p1.equals("보") && p2.equals("바위")) {
-            System.out.println("이겼습니다.");
-        }else {
-            System.out.println("졌습니다.");
-        }
-    }
 }
