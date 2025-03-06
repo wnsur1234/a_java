@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8786a70-af60-4186-864a-b8469dc6a354" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/d_coffeemanager/CoffeeManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/d_control/D_switch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/d_control/E_branching.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/d_control/E_for.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/d_control/E_while.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/f_array/A_array.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/f_array/B_dimensionArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/f_coffeemanager/CoffeeManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/g_class/Coffee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/g_class/Run.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/g_coffeemanager/Coffee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/g_coffeemanager/CoffeeManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/grepp/basic/d_control/z_quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/grepp/basic/d_control/z_quiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/grepp/basic/g_class/Coffee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/grepp/basic/g_class/Coffee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/grepp/basic/g_class/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/grepp/basic/g_class/Run.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,10 +84,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.grepp.basic.g_coffeemanager" />
       <recent name="com.grepp.basic.f_coffeemanager" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Run">
+  <component name="RunManager">
     <configuration name="A_module" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.grepp.basic.e_modulization.A_module" />
       <module name="a_basic" />
@@ -151,7 +145,7 @@
       <workItem from="1741133085819" duration="14841000" />
       <workItem from="1741148526865" duration="17359000" />
       <workItem from="1741218260234" duration="605000" />
-      <workItem from="1741219114461" duration="18795000" />
+      <workItem from="1741219114461" duration="21501000" />
     </task>
     <servers />
   </component>
