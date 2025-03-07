@@ -98,6 +98,7 @@ public class CoffeeManager {
                     salesAmount += coffee.price * orderCnt;
                 }
 
+
                 // 안전재고 기준선 확인
                 // 3 <= 3
                 if (coffee.stock <= coffee.safetyStock) {
