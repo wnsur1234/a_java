@@ -1,4 +1,4 @@
-package com.grepp.oop.a_modifer;
+package com.grepp.oop.a_modifier;
 
 public class Run {
 

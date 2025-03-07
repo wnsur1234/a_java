@@ -1,6 +1,6 @@
-package com.grepp.oop.a_modifer.test;
+package com.grepp.oop.a_modifier.test;
 
-import com.grepp.oop.a_modifer.A_modifier;
+import com.grepp.oop.a_modifier.A_modifier;
 
 public class Run {
 
