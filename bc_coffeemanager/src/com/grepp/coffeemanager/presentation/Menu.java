@@ -3,6 +3,7 @@ package com.grepp.coffeemanager.presentation;
 
 import com.grepp.coffeemanager.domain.account.Account;
 import com.grepp.coffeemanager.domain.coffee.Coffee;
+import com.grepp.coffeemanager.domain.order.Order;
 import com.grepp.coffeemanager.domain.sale.Sale;
 import java.util.Scanner;
 
@@ -82,7 +83,8 @@ public class Menu {
 
     // 주문 생성, 판매를 시작
     private void registOrder(int inputCode, int orderCnt) {
-
+        Order order =  new Order(drinks[inputCode], orderCnt);
+        sale.takeOrder(order);
     }
     
     

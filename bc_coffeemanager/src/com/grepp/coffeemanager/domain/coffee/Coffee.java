@@ -1,5 +1,7 @@
 package com.grepp.coffeemanager.domain.coffee;
 
+import com.grepp.coffeemanager.domain.purchase.Purchase;
+
 public class Coffee {
 
     private String name;
@@ -39,5 +41,33 @@ public class Coffee {
 
     public int getSalesCnt() {
         return salesCnt;
+    }
+
+    public void provide(int orderCnt) {
+        // 재고차감
+        deductStock(orderCnt);
+        // 판매량 추가
+        addSalesCnt(orderCnt);
+    }
+
+    private void addSalesCnt(int orderCnt) {
+        salesCnt += orderCnt;
+    }
+
+    private void deductStock(int orderCnt) {
+        stock -= orderCnt;
+        checkSafetyStock();
+    }
+
+    private void checkSafetyStock() {
+        if(stock < safetyStock){
+            int purchaseCnt = safetyStock * 2;
+            Purchase purchase = new Purchase(this, purchaseCnt);
+            purchase.proceed();
+        }
+    }
+
+    public void addStock(int purchaseCnt) {
+        stock += purchaseCnt;
     }
 }

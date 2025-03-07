@@ -21,4 +21,16 @@ public class Account {
     public int getExpenses() {
         return expenses;
     }
+
+    public boolean registExpenses(int expenses) {
+        if(balance < expenses) return false;
+        balance -= expenses;
+        this.expenses += expenses;
+        return true;
+    }
+
+    public void registSales(int paymentPrice) {
+        balance += paymentPrice;
+        sales += paymentPrice;
+    }
 }

@@ -10,6 +10,13 @@ public class Order {
     private int orderPrice;
     private LocalDateTime orderTime = LocalDateTime.now(); // 현재 시간
 
+    public Order(Coffee coffee, int orderCnt) {
+        this.coffee = coffee;
+        this.orderCnt = orderCnt;
+        this.orderPrice = coffee.getPrice() * orderCnt;
+        this.name = coffee.getName() + "[" + orderCnt + "]";
+    }
+
     public String getName() {
         return name;
     }
@@ -28,5 +35,9 @@ public class Order {
 
     public LocalDateTime getOrderTime() {
         return orderTime;
+    }
+
+    public void proceed() {
+        coffee.provide(orderCnt);
     }
 }
