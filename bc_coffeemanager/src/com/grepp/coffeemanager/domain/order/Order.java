@@ -9,14 +9,28 @@ public class Order {
     private int orderCnt;
     private int orderPrice;
     private LocalDateTime orderTime = LocalDateTime.now(); // 현재 시간
+    private OrderStatus status;
 
+    public static Order createOrder(Coffee coffee, int orderCnt){
+        Order order = new Order(coffee, orderCnt);
+        if(coffee.getStock() < orderCnt) {
+            order.status = OrderStatus.FAIL_SEASON;
+            return order;
+        }
 
+        order.status = OrderStatus.OK;
+        return order;
+    }
 
-    public Order(Coffee coffee, int orderCnt) {
+    private Order(Coffee coffee, int orderCnt) {
         this.coffee = coffee;
         this.orderCnt = orderCnt;
         this.orderPrice = coffee.getPrice() * orderCnt;
         this.name = coffee.getName() + "[" + orderCnt + "]";
+    }
+
+    public OrderStatus status(){
+        return status;
     }
 
     public String getName() {

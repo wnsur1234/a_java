@@ -83,7 +83,11 @@ public class Menu {
 
     // 주문 생성, 판매를 시작
     private void registOrder(int inputCode, int orderCnt) {
-        Order order =  new Order(drinks[inputCode], orderCnt);
+        Order order =  Order.createOrder(drinks[inputCode], orderCnt);
+        if(!order.status().isOk()){
+            System.out.println(order.status().desc());
+            return;
+        }
         sale.takeOrder(order);
     }
     
