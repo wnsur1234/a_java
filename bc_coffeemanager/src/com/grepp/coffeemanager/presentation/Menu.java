@@ -15,7 +15,6 @@ public class Menu {
     Scanner sc = new Scanner(System.in);
 
     public Menu(Sale sale, Account account, Coffee[] drinks) {
-        super();
         this.sale = sale;
         this.account = account;
         this.drinks = drinks;
