@@ -99,6 +99,7 @@ public class CoffeeManager {
                 }
 
                 // 안전재고 기준선 확인
+                // 3 <= 3
                 if (coffee.stock <= coffee.safetyStock) {
                     // 매입금액 산정
                     int purchasePrice = coffee.safetyStock * 2 * coffee.cost;
@@ -110,6 +111,7 @@ public class CoffeeManager {
                         balance -= purchasePrice;
                         // 지출 반영
                         expensesAmount += purchasePrice;
+                        System.out.println(" system: 안전재고 매입을 진행합니다.");
                     } else {
                         System.out.println(" system: 잔액부족으로 안전재고 확보 실패");
                     }

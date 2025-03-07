@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8786a70-af60-4186-864a-b8469dc6a354" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/g_coffeemanager/Coffee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/g_coffeemanager/CoffeeManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/grepp/basic/d_control/F_star.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/grepp/basic/g_class/Coffee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/grepp/basic/g_class/Coffee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/grepp/basic/g_class/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/grepp/basic/g_class/Run.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/grepp/basic/g_coffeemanager/CoffeeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/grepp/basic/g_coffeemanager/CoffeeManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,52 +36,53 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.A_Print.executor": "Run",
-    "Application.A_array.executor": "Run",
-    "Application.A_if.executor": "Run",
-    "Application.A_module.executor": "Run",
-    "Application.A_변수.executor": "Run",
-    "Application.A_변수퀴즈.executor": "Run",
-    "Application.A_산술연산자.executor": "Run",
-    "Application.B_Scanner.executor": "Run",
-    "Application.B_dimensionArray.executor": "Run",
-    "Application.B_ifelse.executor": "Run",
-    "Application.B_상수.executor": "Run",
-    "Application.B_증감연산자.executor": "Run",
-    "Application.C_ifelseif.executor": "Run",
-    "Application.C_문자열.executor": "Run",
-    "Application.C_비교연산자.executor": "Run",
-    "Application.CoffeeManager.executor": "Run",
-    "Application.D_switch.executor": "Run",
-    "Application.D_논리연산자.executor": "Run",
-    "Application.D_문자열결합.executor": "Run",
-    "Application.E_branching.executor": "Run",
-    "Application.E_for.executor": "Run",
-    "Application.E_while.executor": "Run",
-    "Application.E_논리부정연산자.executor": "Run",
-    "Application.F_삼항연산자.executor": "Run",
-    "Application.G_복합대입연산.executor": "Run",
-    "Application.Run.executor": "Run",
-    "Application.z_quiz.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/USER/Desktop/수업자료-v2/수업자료/Code/JAVA_V2/a_basic",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.A_Print.executor&quot;: &quot;Run&quot;,
+    &quot;Application.A_array.executor&quot;: &quot;Run&quot;,
+    &quot;Application.A_if.executor&quot;: &quot;Run&quot;,
+    &quot;Application.A_module.executor&quot;: &quot;Run&quot;,
+    &quot;Application.A_변수.executor&quot;: &quot;Run&quot;,
+    &quot;Application.A_변수퀴즈.executor&quot;: &quot;Run&quot;,
+    &quot;Application.A_산술연산자.executor&quot;: &quot;Run&quot;,
+    &quot;Application.B_Scanner.executor&quot;: &quot;Run&quot;,
+    &quot;Application.B_dimensionArray.executor&quot;: &quot;Run&quot;,
+    &quot;Application.B_ifelse.executor&quot;: &quot;Run&quot;,
+    &quot;Application.B_상수.executor&quot;: &quot;Run&quot;,
+    &quot;Application.B_증감연산자.executor&quot;: &quot;Run&quot;,
+    &quot;Application.C_ifelseif.executor&quot;: &quot;Run&quot;,
+    &quot;Application.C_문자열.executor&quot;: &quot;Run&quot;,
+    &quot;Application.C_비교연산자.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CoffeeManager.executor&quot;: &quot;Run&quot;,
+    &quot;Application.D_switch.executor&quot;: &quot;Run&quot;,
+    &quot;Application.D_논리연산자.executor&quot;: &quot;Run&quot;,
+    &quot;Application.D_문자열결합.executor&quot;: &quot;Run&quot;,
+    &quot;Application.E_branching.executor&quot;: &quot;Run&quot;,
+    &quot;Application.E_for.executor&quot;: &quot;Run&quot;,
+    &quot;Application.E_while.executor&quot;: &quot;Run&quot;,
+    &quot;Application.E_논리부정연산자.executor&quot;: &quot;Run&quot;,
+    &quot;Application.F_star.executor&quot;: &quot;Run&quot;,
+    &quot;Application.F_삼항연산자.executor&quot;: &quot;Run&quot;,
+    &quot;Application.G_복합대입연산.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Run.executor&quot;: &quot;Run&quot;,
+    &quot;Application.z_quiz.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/USER/Desktop/수업자료-v2/수업자료/Code/JAVA_V2/a_basic&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.grepp.basic.g_coffeemanager" />
@@ -95,6 +96,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.grepp.basic.e_modulization.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="F_star" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.grepp.basic.d_control.F_star" />
+      <module name="a_basic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.grepp.basic.d_control.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,8 +131,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Run" />
+        <item itemvalue="Application.F_star" />
         <item itemvalue="Application.A_module" />
+        <item itemvalue="Application.Run" />
       </list>
     </recent_temporary>
   </component>
@@ -145,7 +160,11 @@
       <workItem from="1741133085819" duration="14841000" />
       <workItem from="1741148526865" duration="17359000" />
       <workItem from="1741218260234" duration="605000" />
-      <workItem from="1741219114461" duration="21501000" />
+      <workItem from="1741219114461" duration="22992000" />
+      <workItem from="1741245245921" duration="287000" />
+      <workItem from="1741245791974" duration="43000" />
+      <workItem from="1741250399253" duration="1047000" />
+      <workItem from="1741305657831" duration="2979000" />
     </task>
     <servers />
   </component>
