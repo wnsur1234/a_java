@@ -10,6 +10,8 @@ public class Order {
     private int orderPrice;
     private LocalDateTime orderTime = LocalDateTime.now(); // 현재 시간
 
+
+
     public Order(Coffee coffee, int orderCnt) {
         this.coffee = coffee;
         this.orderCnt = orderCnt;

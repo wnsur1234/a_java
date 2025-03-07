@@ -14,9 +14,10 @@ public class Purchase {
     }
 
     public void proceed() {
-        Account account = new Account(100000);
+        Account account = Account.getInstance();
+        int purchasePrice = coffee.getPurchasePrice() * purchaseCnt;
         // 매입금액을 계좌에 등록
-        if(account.registExpenses(purchaseCnt)){
+        if(account.registExpenses(purchasePrice)){
             System.out.println("* system : " + coffee.getName() + "[" + purchaseCnt + "잔] 매입");
             coffee.addStock(purchaseCnt);
             return;

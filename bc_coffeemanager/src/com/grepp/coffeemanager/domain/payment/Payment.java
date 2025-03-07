@@ -18,7 +18,7 @@ public class Payment {
     }
 
     public void proceed() {
-        Account account = new Account(100000);
+        Account account = Account.getInstance();
         account.registSales(paymentPrice);
     }
 }
