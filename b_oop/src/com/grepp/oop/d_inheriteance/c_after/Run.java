@@ -33,12 +33,11 @@ public class Run {
         for (Device device : devices){
             device.on();
             // 컴퓨터 타입을 가진 인스턴스는 스위치를 켠 다음 메모리 정리를 수행
-            if(device instanceof Computer computer){
-                // down casting : 선조타입을 후손타입으로 변환
-                // up casting : 후손타입을 선조타입으로 변환(자동)
-                // Computer computer = (Computer) device;
+            // down casting : 선조타입을 후손타입으로 변환
+            // up casting : 후손타입을 선조타입으로 변환(자동)
+            // Computer computer = (Computer) device;
+            if(device instanceof Computer computer)
                 computer.cleanUp();
-            }
             System.out.println("=======================");
         }
     }
