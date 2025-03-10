@@ -13,5 +13,10 @@ public class Run {
         smartPhone.connect();
         smartPhone.disconnect();
         StarLink.callAgency();
+
+        Https phone = (Https) smartPhone;
+        phone.send();
+        phone.receive();
+        phone.encrypt();
     }
 }

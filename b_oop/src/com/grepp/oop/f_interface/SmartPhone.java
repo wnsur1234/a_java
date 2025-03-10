@@ -3,7 +3,7 @@ package com.grepp.oop.f_interface;
 // NOTE F02 implements
 // 클래스에서 interface 를 구현할 때 선언
 // 인터페이스의 구현은 상속과 마찬가지로, 타입을 물려준다.
-public class SmartPhone extends Computer implements StarLink {
+public class SmartPhone extends Computer implements StarLink, Https {
 
     private String agency;
 
@@ -32,5 +32,20 @@ public class SmartPhone extends Computer implements StarLink {
     @Override
     public void connect() {
         System.out.println("인공위성에 연결합니다.");
+    }
+
+    @Override
+    public void send() {
+        System.out.println("메세지를 전송합니다.");
+    }
+
+    @Override
+    public void receive() {
+        System.out.println("메세지를 받습니다.");
+    }
+
+    @Override
+    public void encrypt() {
+        System.out.println("암호화 합니다.");
     }
 }
