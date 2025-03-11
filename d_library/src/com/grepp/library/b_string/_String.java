@@ -1,5 +1,7 @@
 package com.grepp.library.b_string;
 
+import java.util.Arrays;
+
 public class _String {
 
     public static void main(String[] args) {
@@ -27,6 +29,8 @@ public class _String {
 
         //7. str을 char[]형태로 출력 해주세요.
         System.out.println("7. str을 char[]형태로 출력 해주세요.");
+        //System.out.println(Arrays.toString());
+        System.out.println(str);
 
     }
 
