@@ -18,6 +18,26 @@ public class GenericArray<E> {
         elements = new Object[size];
     }
 
+    // NOTE 02 제네릭 메서드
+    public static <T> GenericArray<T> practiceGeneric(T e){
+        GenericArray<T> instance = new GenericArray<>(10);
+        instance.add(e);
+        return instance;
+    }
+
+    // NOTE 03 타입 한정 키워드
+    // T extends Device : Device 타입을 포함한 후손 타입
+    public static <T extends Device> GenericArray<T> practiceExtends(T e){
+        GenericArray<T> instance = new GenericArray<>(10);
+        instance.add(e);
+        return instance;
+    }
+
+
+
+
+
+
     public int size(){
         return size;
     }
