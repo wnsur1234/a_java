@@ -1,5 +1,6 @@
 package com.grepp.library.c_collection.b_list;
 
+import com.grepp.library.c_collection.b_list.grepp._ArrayList;
 import com.grepp.library.c_collection.z_domain.School;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,7 +12,7 @@ public class Run {
         // NOTE B01 : CRUD
         // 데이터를 조작하는 방법
         // Create, Read, Update, Delete
-        // pracAdd();
+        pracAdd();
         // pracGet();
         // pracSet();
         // pracRemove();
@@ -75,12 +76,16 @@ public class Run {
     }
 
     private static void pracAdd() {
-        List<Integer> list = new ArrayList<>();
+        _ArrayList<Integer> list = new _ArrayList<>();
 
         for (int i = 0; i < 30; i++) {
             list.add(i);
         }
 
-        System.out.println(list);
+        for (int i = 0; i < 30; i++) {
+            System.out.print(list.get(i) + " ");
+        }
+
+        System.out.println("\n==================================");
     }
 }
