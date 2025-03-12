@@ -10,10 +10,12 @@ public class Run {
         StaticInner staticInner = new A_OuterClass.StaticInner();
         staticInner.print();
 
+        // 이렇게는 잘 안씀
         A_OuterClass a = new A_OuterClass("outer");
         InstanceInner instanceInner = a.new InstanceInner();
         instanceInner.print();
 
-    }
+        a.localClass();
 
+    }
 }
