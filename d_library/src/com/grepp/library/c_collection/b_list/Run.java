@@ -1,5 +1,7 @@
 package com.grepp.library.c_collection.b_list;
 
+import com.grepp.library.c_collection.b_list.grepp._LinkedList;
+import com.grepp.library.c_collection.b_list.grepp._List;
 import com.grepp.library.c_collection.z_domain.School;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,23 +14,27 @@ public class Run {
         // NOTE B01 : CRUD
         // 데이터를 조작하는 방법
         // Create, Read, Update, Delete
-         pracAdd();
-         pracGet();
-         pracSet();
+         //pracAdd();
+         //pracGet();
+         //pracSet();
          pracRemove();
-         pracSort();
-        practIterable();
+         //pracSort();
+        //practIterable();
     }
 
     private static void practIterable() {
-        LinkedList<Integer> list = new LinkedList<>();
+        _List<Integer> list = new _LinkedList<>();
         for (int i = 0; i < 10; i++) {
             list.add(i);
         }
 
-        for(Integer i : list){
-            System.out.println(i);
+        for (int i = 0; i < 10; i++) {
+            System.out.println(list.get(i));
         }
+
+//        for(Integer i : list){
+//            System.out.println(i);
+//        }
     }
 
     private static void pracSort() {
@@ -48,12 +54,18 @@ public class Run {
     }
 
     private static void pracRemove() {
-        List<Integer> list = new ArrayList<>();
+        _LinkedList<Integer> list = new _LinkedList<>();
         for (int i = 0; i < 10; i++) {
             list.add(i);
         }
+
         System.out.println(list);
-        
+        list.remove(2);
+
+        for (int i = 0; i < 9; i++) {
+            System.out.println(list.get(i));
+        }
+
         // 0, 1, 2, 3 인덱스 삭제
 //        List<Integer> subList = list.subList(0, 4);
 //        list.removeAll(subList);
@@ -67,13 +79,13 @@ public class Run {
         School grepp = new School("그랩", "삼성", 10);
         School semyoung = new School("세명초", "속초", 1);
 
-        List<School> list = new ArrayList<>();
+        _LinkedList<School> list = new _LinkedList<>();
         list.add(seoul);
         list.add(yeonsae);
-        System.out.println(list);
+        System.out.println(list.get(0));
 
         list.set(0, grepp);
-        System.out.println(list);
+        System.out.println(list.get(0));
     }
 
     private static void pracGet() {

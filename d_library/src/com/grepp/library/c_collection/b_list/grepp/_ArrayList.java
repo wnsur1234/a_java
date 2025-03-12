@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 @SuppressWarnings("unchecked")
-public class _ArrayList<E> implements Iterable<E>{
+public class _ArrayList<E> implements Iterable<E>, _List<E>{
 
     private Object[] elementData;
     private static final int DEFAULT_CAPACITY= 10;
@@ -14,6 +14,10 @@ public class _ArrayList<E> implements Iterable<E>{
     public _ArrayList() {
         elementData = new Object[DEFAULT_CAPACITY];
         arraySize = DEFAULT_CAPACITY;
+    }
+
+    public void add(int index, E element){
+
     }
 
     public boolean add(E e){
@@ -40,6 +44,8 @@ public class _ArrayList<E> implements Iterable<E>{
         if(index < 0 || index >= pointer) throw new IndexOutOfBoundsException("인덱스 범위를 벗어났습니다.");
         return (E) elementData[index];
     }
+
+
 
     public int size(){
         return pointer;
