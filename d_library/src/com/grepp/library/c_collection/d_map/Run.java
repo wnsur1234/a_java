@@ -5,10 +5,8 @@ import com.grepp.library.c_collection.d_map.grepp._HashMap;
 import com.grepp.library.c_collection.z_domain.School;
 import com.grepp.library.c_collection.z_domain.SchoolFactory;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
+
 
 
 public class Run {
@@ -16,20 +14,20 @@ public class Run {
     public static void main(String[] args) {
         List<School> schools = SchoolFactory.crateSchools();
         pracPut();
-        //pracGet();
+        pracGet();
     }
 
     private static void pracGet() {
         System.out.println("===get===");
-        HashMap<String, School> map = createSchools();
+        _HashMap<String, School> map = createSchools();
         System.out.println(map.get("서울대"));
         System.out.println(map.get("연세대"));
         System.out.println(map.get("그랩"));
 
-//        for (Entry<String, School> entry : map.entrySet()){
-//            System.out.println("key : " + entry.getKey());
-//            System.out.println("value : " + entry.getValue());
-//        }
+        for (_Entry<String, School> entry : map.entrySet()){
+            System.out.println("key : " + entry.getKey());
+            System.out.println("value : " + entry.getValue());
+        }
 
         System.out.println("==============================");
 
@@ -46,8 +44,8 @@ public class Run {
 //        }
     }
 
-    private static HashMap<String, School> createSchools() {
-        HashMap<String, School> map = new HashMap<>();
+    private static _HashMap<String, School> createSchools() {
+        _HashMap<String, School> map = new _HashMap<>();
         List<School> schools = SchoolFactory.crateSchools();
         for(School school : schools){
             map.put(school.getName(), school);

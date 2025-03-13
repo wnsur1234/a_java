@@ -1,6 +1,6 @@
 package com.grepp.library.c_collection.d_map.grepp;
 
-import com.grepp.library.c_collection.c_set.grepp._HashSet_p2;
+import com.grepp.library.c_collection.c_set.grepp._HashSet;
 
 public class _HashMap <K, V>{
 
@@ -31,7 +31,7 @@ public class _HashMap <K, V>{
         return value;
     }
 
-    public _HashSet_p2<_Entry<K,V>> entrySet(){
+    public _HashSet<_Entry<K,V>> entrySet(){
         return entrySet;
     }
 

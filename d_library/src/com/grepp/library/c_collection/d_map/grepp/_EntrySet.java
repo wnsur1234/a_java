@@ -1,9 +1,10 @@
 package com.grepp.library.c_collection.d_map.grepp;
 
-import com.grepp.library.c_collection.c_set.grepp._HashSet_p2;
-import com.grepp.library.c_collection.z_domain.Node;
+import com.grepp.library.c_collection.b_list.grepp._LinkedList;
+import com.grepp.library.c_collection.c_set.grepp._HashSet;
 
-public class _EntrySet<E> extends _HashSet_p2<E> {
+@SuppressWarnings("unchecked")
+public class _EntrySet<E> extends _HashSet<E> {
 
     _EntrySet() {
     }
@@ -19,17 +20,14 @@ public class _EntrySet<E> extends _HashSet_p2<E> {
 
     public E get(E e){
         int index = hash(e);
-        Node<E> head = (Node<E>) elementData[index];
+        _LinkedList<E> row = (_LinkedList<E>)super.elementData[index];
 
-        if(head == null) return null;
-        if(head.equals(e)) return head.data();
+        if(row == null) return null;
 
-        Node<E> link = head;
-        while(link != null){
-            if(link.data().equals(e)){
-                return link.data();
+        for(E data : row){
+            if(data.equals(e)){
+                return data;
             }
-            link = link.next();
         }
 
         return null;
