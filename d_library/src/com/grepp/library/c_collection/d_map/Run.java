@@ -5,6 +5,7 @@ import com.grepp.library.c_collection.d_map.grepp._HashMap;
 import com.grepp.library.c_collection.z_domain.School;
 import com.grepp.library.c_collection.z_domain.SchoolFactory;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -22,6 +23,9 @@ public class Run {
         System.out.println("===get===");
         _HashMap<String, School> map = createSchools();
         System.out.println(map.get("서울대"));
+        System.out.println(map.get("연세대"));
+        System.out.println(map.get("그랩"));
+
 
 //        for (_Entry<String, School> entry : map.entrySet()){
 //            System.out.println("key : " + entry.getKey());

@@ -7,7 +7,7 @@ public class _Entry<K,V> {
     private K key;
     private V value;
 
-    public _Entry(K key, V value) {
+    _Entry(K key, V value) {
         this.key = key;
         this.value = value;
     }
@@ -35,5 +35,13 @@ public class _Entry<K,V> {
     @Override
     public int hashCode() {
         return Objects.hashCode(key);
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+            "key=" + key +
+            ", value=" + value +
+            '}';
     }
 }

@@ -39,4 +39,8 @@ public class _HashMap <K, V>{
         return get(key) != null;
     }
 
+    @Override
+    public String toString() {
+        return entrySet.toString();
+    }
 }

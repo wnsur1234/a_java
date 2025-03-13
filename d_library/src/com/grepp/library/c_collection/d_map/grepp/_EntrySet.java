@@ -5,6 +5,9 @@ import com.grepp.library.c_collection.z_domain.Node;
 
 public class _EntrySet<E> extends _HashSet_p2<E> {
 
+    _EntrySet() {
+    }
+
     public E get(E e){
         int index = hash(e);
         Node<E> head = (Node<E>) elementData[index];
