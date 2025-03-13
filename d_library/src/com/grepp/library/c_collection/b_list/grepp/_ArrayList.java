@@ -54,7 +54,6 @@ public class _ArrayList<E> implements Iterable<E>, _List<E>{
     @Override
     public Iterator<E> iterator() {
         return new Iterator<E>() {
-
             private int pointer;
 
             @Override

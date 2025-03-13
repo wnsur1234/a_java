@@ -5,6 +5,7 @@ import com.grepp.library.c_collection.b_list.grepp._List;
 import com.grepp.library.c_collection.z_domain.School;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -17,24 +18,24 @@ public class Run {
          //pracAdd();
          //pracGet();
          //pracSet();
-         pracRemove();
+         //pracRemove();
          //pracSort();
-        //practIterable();
+        practIterable();
     }
 
     private static void practIterable() {
-        _List<Integer> list = new _LinkedList<>();
+        _LinkedList<Integer> list = new _LinkedList<>();
         for (int i = 0; i < 10; i++) {
             list.add(i);
         }
 
-        for (int i = 0; i < 10; i++) {
-            System.out.println(list.get(i));
-        }
-
-//        for(Integer i : list){
-//            System.out.println(i);
+//        for (int i = 0; i < 10; i++) {
+//            System.out.println(list.get(i));
 //        }
+
+        for(Integer i : list){
+            System.out.println(i);
+        }
     }
 
     private static void pracSort() {
