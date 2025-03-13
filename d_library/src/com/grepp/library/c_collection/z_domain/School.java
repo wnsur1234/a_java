@@ -51,4 +51,8 @@ public class School implements Comparable<School> {
     public int hashCode() {
         return Objects.hash(name, address, level);
     }
+
+    public String getName() {
+        return this.name;
+    }
 }

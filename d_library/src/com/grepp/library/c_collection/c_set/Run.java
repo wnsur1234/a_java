@@ -31,7 +31,6 @@ public class Run {
         );
         Set<String> firstSet = new HashSet<>(firstList);
         Set<String> secondSet = new HashSet<>(secondList);
-
         //pracSetOperation(firstSet, secondSet);
     }
 
