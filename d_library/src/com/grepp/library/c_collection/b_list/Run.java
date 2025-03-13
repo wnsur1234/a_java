@@ -24,7 +24,7 @@ public class Run {
     }
 
     private static void practIterable() {
-        _LinkedList<Integer> list = new _LinkedList<>();
+        _List<Integer> list = new _LinkedList<>();
         for (int i = 0; i < 10; i++) {
             list.add(i);
         }
