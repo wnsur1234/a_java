@@ -16,18 +16,17 @@ public class Run {
     public static void main(String[] args) {
         List<School> schools = SchoolFactory.crateSchools();
         pracPut();
-        pracGet();
+        //pracGet();
     }
 
     private static void pracGet() {
         System.out.println("===get===");
-        _HashMap<String, School> map = createSchools();
+        HashMap<String, School> map = createSchools();
         System.out.println(map.get("서울대"));
         System.out.println(map.get("연세대"));
         System.out.println(map.get("그랩"));
 
-
-//        for (_Entry<String, School> entry : map.entrySet()){
+//        for (Entry<String, School> entry : map.entrySet()){
 //            System.out.println("key : " + entry.getKey());
 //            System.out.println("value : " + entry.getValue());
 //        }
@@ -47,8 +46,8 @@ public class Run {
 //        }
     }
 
-    private static _HashMap<String, School> createSchools() {
-        _HashMap<String, School> map = new _HashMap<>();
+    private static HashMap<String, School> createSchools() {
+        HashMap<String, School> map = new HashMap<>();
         List<School> schools = SchoolFactory.crateSchools();
         for(School school : schools){
             map.put(school.getName(), school);
@@ -64,6 +63,6 @@ public class Run {
         map.put("연세대", schools.get(1));
         map.put("grepp", schools.get(2));
         map.put("grepp", new School("우리반","집", 4));
-        System.out.println(map);
+        System.out.println(map.get("grepp"));
     }
 }
