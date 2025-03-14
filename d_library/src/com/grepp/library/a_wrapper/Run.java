@@ -1,8 +1,6 @@
 package com.grepp.library.a_wrapper;
 
 
-import javax.print.DocFlavor.INPUT_STREAM;
-
 // NOTE AA01 Wrapper class
 // 순수 OOP 언어: 모든 것이 객체로 이루어진 언어
 // 자바는 원시타입이 있기 때문에 순수 OOP 언어가 아니다.
