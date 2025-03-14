@@ -6,6 +6,8 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Consumer;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -19,28 +21,41 @@ public static void main(String[] args) {
     // testMap();
     // testGroupBy();
     // testReduce();
+    testForeach().accept("바깥에서 호출 가능");
+}
+
+private static Consumer<String> testForeach() {
+    List<Exam> exams = createList();
+    // NOTE fb01 : 람다 내부에서 지역변수를 사용할 수 없음
+    // 사용하려면 상수처럼 쓸 수 있도록 추가적인 조치가 필요함.
+    exams.forEach(System.out::println);
+    int num = 0;
+    Consumer<String> res = e -> System.out.println(e + ": " + num );
+    return res;
 }
 
 private static void testReduce() {
     List<Integer> list = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-    int sum = list.stream().reduce((a, b) -> a + b).orElse(0);
+    int sum = list.parallelStream().reduce(0,
+        (a, b) -> a + b,
+        (a, b) -> a + b);
 
     System.out.println(sum);
-    practiceReduceToFilter(createList());
-    practiceReduceToMap(createList());
+    // practiceReduceToFilter(createList());
+    // practiceReduceToMap(createList());
 }
 
 // exams 에서 학생 이름을 추출해, Set으로 반환하는 reduce를 작성하시오
 // [어선정, 하명도]
 private static void practiceReduceToMap(List<Exam> list) {
-    Set<String> nameSet = list.stream()
+    Set<String> nameSet = list.parallelStream()
         .reduce(
             new LinkedHashSet<>(),
             (a, b) -> {
                 a.add(b.name());
                 return a;
             },
-            (a, b) -> null);
+            (a, b) -> a);
 
     System.out.println(nameSet);
 }
