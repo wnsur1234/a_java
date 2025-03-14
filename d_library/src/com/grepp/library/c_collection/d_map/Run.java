@@ -5,16 +5,40 @@ import com.grepp.library.c_collection.d_map.grepp._HashMap;
 import com.grepp.library.c_collection.z_domain.School;
 import com.grepp.library.c_collection.z_domain.SchoolFactory;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
-
+import java.util.Map;
 
 
 public class Run {
 
     public static void main(String[] args) {
-        List<School> schools = SchoolFactory.crateSchools();
         pracPut();
         pracGet();
+        pracLinkeHashMap();
+    }
+
+    private static void pracLinkeHashMap() {
+        List<School> schools = SchoolFactory.crateSchools();
+
+        // NOTE D01 LinkedHashMap
+        // HashMap : 해시 함수를 사용해 entry 저장, 순서보장이 되지 않는다.
+        Map<String, School> hashMap = new HashMap<>();
+        // NOTE D02 LinkedHashMap
+        // HashMap 의 Entry를 LinkedList 로 연결해 순서를 보장
+        Map<String, School> linkedHashMap = new LinkedHashMap<>();
+
+        for (School school : schools){
+            hashMap.put(school.getName(), school);
+        }
+
+        for (School school : schools){
+            linkedHashMap.put(school.getName(), school);
+        }
+
+
+        System.out.println(linkedHashMap);
+        System.out.println(hashMap);
     }
 
     private static void pracGet() {
