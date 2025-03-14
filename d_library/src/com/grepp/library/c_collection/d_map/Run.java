@@ -36,7 +36,6 @@ public class Run {
             linkedHashMap.put(school.getName(), school);
         }
 
-
         System.out.println(linkedHashMap);
         System.out.println(hashMap);
     }
