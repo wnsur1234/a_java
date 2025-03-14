@@ -62,7 +62,7 @@ public class _HashSet_p1<E> {
         arraySize *= 2;
         Object[] temp = new Object[arraySize];
 
-        for (int i = 0; i < arraySize; i++) {
+        for (int i = 0; i < elementData.length; i++) {
             if(elementData[i] == null) continue;
             int newIndex = hash((E) elementData[i]);
             temp[newIndex] = elementData[i];
