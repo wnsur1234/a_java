@@ -13,8 +13,8 @@ public class UsaPaymentTranslator extends PaymentDecorator{
         String orderName = target.translateOrderName();
         Payment payment = origin();
         
-        String coffeeCnt = payment.getOrder().getCoffee().getName();
-        int orderCnt = payment.getOrder().getOrderCnt();
+        String coffeeCnt = payment.getCoffeeName();
+        int orderCnt = payment.getOrderCnt();
         orderName += ", " + orderCnt + "cup of " + coffeeCnt;
         return orderName;
     }

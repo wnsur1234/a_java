@@ -64,4 +64,8 @@ public class Order {
     public void proceed() {
         coffee.provide(orderCnt);
     }
+    
+    public String getCoffeeName() {
+        return coffee.getName();
+    }
 }

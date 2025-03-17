@@ -57,4 +57,12 @@ public class Payment implements PaymentTranslator {
     public Payment origin() {
         return this;
     }
+    
+    public String getCoffeeName() {
+        return order.getCoffeeName();
+    }
+    
+    public int getOrderCnt() {
+        return order.getOrderCnt();
+    }
 }
