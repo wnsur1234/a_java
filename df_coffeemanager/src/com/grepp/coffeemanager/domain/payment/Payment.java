@@ -19,7 +19,7 @@ public class Payment {
     }
 
     public int getPaymentPrice() {
-        return calcPaymentPrice();
+        return paymentPrice;
     }
     
     private int calcPaymentPrice() {
