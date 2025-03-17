@@ -30,8 +30,7 @@ private static Consumer<String> testForeach() {
     // 사용하려면 상수처럼 쓸 수 있도록 추가적인 조치가 필요함.
     exams.forEach(System.out::println);
     int num = 0;
-    Consumer<String> res = e -> System.out.println(e + ": " + num );
-    return res;
+    return  e -> System.out.println(e + ": " + num );
 }
 
 private static void testReduce() {
