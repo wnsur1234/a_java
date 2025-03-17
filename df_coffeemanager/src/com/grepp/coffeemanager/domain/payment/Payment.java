@@ -15,7 +15,7 @@ public class Payment {
 
     public Payment(Order order) {
         this.order = order;
-        this.paymentPrice = order.getOrderPrice();
+        this.paymentPrice = calcPaymentPrice();
     }
 
     public int getPaymentPrice() {
