@@ -1,14 +1,18 @@
 package com.grepp.coffeemanager.domain.sale;
 
+import com.grepp.coffeemanager.domain.multilingual.payment.ChinaPaymentTranslator;
+import com.grepp.coffeemanager.domain.multilingual.payment.PaymentTranslator;
+import com.grepp.coffeemanager.domain.multilingual.payment.SpainPaymentTranslator;
+import com.grepp.coffeemanager.domain.multilingual.payment.UsaPaymentTranslator;
 import com.grepp.coffeemanager.domain.order.Order;
 import com.grepp.coffeemanager.domain.payment.Payment;
 
 public class Sale {
 
-    public Payment takeOrder(Order order) {
+    public PaymentTranslator takeOrder(Order order) {
         order.proceed();
         Payment payment = new Payment(order);
         payment.proceed();
-        return payment;
+        return new SpainPaymentTranslator(new ChinaPaymentTranslator(payment));
     }
 }

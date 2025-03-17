@@ -3,6 +3,7 @@ package com.grepp.coffeemanager.presentation;
 
 import com.grepp.coffeemanager.domain.account.Account;
 import com.grepp.coffeemanager.domain.coffee.Coffee;
+import com.grepp.coffeemanager.domain.multilingual.payment.PaymentTranslator;
 import com.grepp.coffeemanager.domain.order.Order;
 import com.grepp.coffeemanager.domain.sale.Sale;
 import java.util.Scanner;
@@ -88,7 +89,9 @@ public class Menu {
             System.out.println(order.status().desc());
             return;
         }
-        sale.takeOrder(order);
+        PaymentTranslator payment = sale.takeOrder(order);
+        System.out.println(" * " + payment.translateOrderName());
+        System.out.println(" * 결재금액 : " + payment.translatePaymentPrice());
     }
     
     

@@ -1,39 +1,60 @@
 package com.grepp.coffeemanager.domain.payment;
 
 import com.grepp.coffeemanager.domain.account.Account;
+import com.grepp.coffeemanager.domain.discount.AbsoluteDiscountPolicy;
 import com.grepp.coffeemanager.domain.discount.DiscountPolicy;
 import com.grepp.coffeemanager.domain.discount.PercentDiscountPolicy;
+import com.grepp.coffeemanager.domain.multilingual.payment.PaymentTranslator;
 import com.grepp.coffeemanager.domain.order.Order;
 
-public class Payment {
-
+public class Payment implements PaymentTranslator {
+    
     private Order order;
     private int paymentPrice;
     private static final DiscountPolicy[] polies = {
-        new PercentDiscountPolicy()
+        new PercentDiscountPolicy(),
+        new AbsoluteDiscountPolicy()
     };
-
+    
     public Payment(Order order) {
         this.order = order;
-        this.paymentPrice = calcPaymentPrice();
+        calcPaymentPrice();
     }
-
+    
     public int getPaymentPrice() {
         return paymentPrice;
     }
     
-    private int calcPaymentPrice() {
+    private void calcPaymentPrice() {
         int discountAmount = 0;
-        for(DiscountPolicy policy : polies) {
+        for (DiscountPolicy policy : polies) {
             discountAmount += policy.getDiscountAmount(order);
         }
         
         paymentPrice = order.getOrderPrice() - discountAmount;
-        return paymentPrice;
     }
     
     public void proceed() {
         Account account = Account.getInstance();
         account.registSales(paymentPrice);
+    }
+    
+    public Order getOrder() {
+        return order;
+    }
+    
+    @Override
+    public String translateOrderName() {
+        return order.getName();
+    }
+    
+    @Override
+    public String translatePaymentPrice() {
+        return String.valueOf(paymentPrice);
+    }
+    
+    @Override
+    public Payment origin() {
+        return this;
     }
 }
