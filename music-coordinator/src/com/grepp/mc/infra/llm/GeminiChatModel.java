@@ -33,7 +33,6 @@ public class GeminiChatModel {
                                       .build();
             
             HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-            System.out.println(response.statusCode());
             System.out.println(response.body());
             
         } catch (IOException | InterruptedException e) {

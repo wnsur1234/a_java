@@ -7,5 +7,8 @@ public record RequestDocument<T>(
     List<Content> contents,
     GenerationConfig<T> generationConfig
 ) {
-
+    
+    public RequestDocument(String text, T format) {
+        this(List.of(new Content(text)), new GenerationConfig<>(format));
+    }
 }
