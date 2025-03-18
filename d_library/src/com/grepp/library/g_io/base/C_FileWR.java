@@ -1,11 +1,8 @@
 package com.grepp.library.g_io.base;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class C_FileWR {
@@ -40,10 +37,7 @@ public class C_FileWR {
         String filename = sc.nextLine();
         System.out.print("내용 : ");
         String content = sc.nextLine();
-        
-        // NOTE GB04
-        // try with resource 문
-        // try(AutoClosable 변수 선언) {} catch - finally
+
         try(FileWriter writer = new FileWriter(filename, true)) {
             writer.write(content);
         } catch (IOException e) {
