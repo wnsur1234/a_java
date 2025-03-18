@@ -1,5 +1,7 @@
 package com.grepp.mc.infra.llm;
 
+import com.google.gson.Gson;
+import com.grepp.mc.infra.llm.gemini.text.vo.RequestDocument;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -10,9 +12,12 @@ import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.time.Duration;
 
-public class Run {
+public class GeminiChatModel {
     
-    public static void main(String[] args) {
+    public static void invoke(RequestDocument doc) {
+        
+        String body = new Gson().toJson(doc);
+        
         try (
             HttpClient client = HttpClient.newBuilder()
                                     .version(Version.HTTP_1_1)
@@ -24,11 +29,7 @@ public class Run {
                                           "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyAro1HcDM1LCJ5b8lNmHCheQtw7mmpXOEw"))
                                       .timeout(Duration.ofMinutes(2))
                                       .header("Content-Type", "application/json")
-                                      .POST(BodyPublishers.ofString("{\n"
-                                                                        + "  \"contents\": [{\n"
-                                                                        + "    \"parts\":[{\"text\": \"내일 아침 운동을 할까 말까?\"}]\n"
-                                                                        + "    }]\n"
-                                                                        + "   }"))
+                                      .POST(BodyPublishers.ofString(body))
                                       .build();
             
             HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
