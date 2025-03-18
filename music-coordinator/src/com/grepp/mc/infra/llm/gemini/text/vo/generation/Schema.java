@@ -6,7 +6,7 @@ public record Schema<T>(
 ) {
     
     public Schema(Item<T> items) {
-        this("ARRAY", items);
+        this("array", items);
     }
     
     public Schema(T properties){
