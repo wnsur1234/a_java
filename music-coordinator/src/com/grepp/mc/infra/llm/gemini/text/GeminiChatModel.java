@@ -20,7 +20,7 @@ public class GeminiChatModel implements ChatModel {
     private static final String API_URL = "https://generativelanguage.googleapis.com"
                                               + "/v1beta"
                                               + "/models"
-                                              + "/gemini-2.0-flash:generateContent";
+                                              + "/gemini-1.5-flash:generateContent";
     
     private static final String API_KEY = "AIzaSyAro1HcDM1LCJ5b8lNmHCheQtw7mmpXOEw";
     

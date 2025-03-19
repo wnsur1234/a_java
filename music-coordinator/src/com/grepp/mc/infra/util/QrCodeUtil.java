@@ -10,7 +10,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class QrCodeUtil {
-    
     public static void createQrCode(String format, String content, FileOutputStream fos){
         QRCodeWriter writer = new QRCodeWriter();
         try{
@@ -20,5 +19,4 @@ public class QrCodeUtil {
             throw new CommonException("QR CODE 생성에 실패했습니다.", e);
         }
     }
-    
 }
