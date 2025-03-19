@@ -1,6 +1,6 @@
 package com.grepp.mc.domain.song;
 
-import com.grepp.mc.infra.llm.gemini.text.vo.generation.PropertyType;
+import com.grepp.llm.gemini.text.vo.generation.PropertyType;
 import java.util.Map;
 
 public record SongFormat(

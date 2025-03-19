@@ -17,9 +17,6 @@ public class QrCodeGenerator {
         String filename = music + ".png";
         String qrContent = url + encoded;
         
-        System.out.println(qrContent);
-        System.out.println(filename);
-        
         try(FileOutputStream fos = new FileOutputStream(filename)){
             QrCodeUtil.createQrCode("png", qrContent, fos);
         } catch (IOException e) {

@@ -1,6 +1,7 @@
 package com.grepp.mc.infra.llm.gemini.text;
 
 import com.google.gson.Gson;
+import com.grepp.mc.infra.error.CommonException;
 import com.grepp.mc.infra.llm.ChatModel;
 import com.grepp.mc.infra.llm.Request;
 import com.grepp.mc.infra.llm.Response;
@@ -17,12 +18,17 @@ import java.time.Duration;
 
 public class GeminiChatModel implements ChatModel {
     
-    private static final String API_URL = "https://generativelanguage.googleapis.com"
-                                              + "/v1beta"
-                                              + "/models"
-                                              + "/gemini-1.5-flash:generateContent";
+    private final String API_URL;
+    private final String API_KEY;
     
-    private static final String API_KEY = "AIzaSyAro1HcDM1LCJ5b8lNmHCheQtw7mmpXOEw";
+    public GeminiChatModel(String version, String apiKey) {
+        this.API_URL = "https://generativelanguage.googleapis.com"
+                           + "/v1beta"
+                           + "/models"
+                           + "/gemini-" + version + "-flash:generateContent";
+        
+        this.API_KEY = apiKey;
+    }
     
     @Override
     public Response invoke(Request request) {
@@ -44,10 +50,16 @@ public class GeminiChatModel implements ChatModel {
                                       .build();
             
             HttpResponse<String> response = client.send(requestClient, BodyHandlers.ofString());
+            
+            if(response.statusCode() != 200){
+                throw new CommonException(response.body());
+            }
+            
             return new TextResponse(response.body());
             
         } catch (IOException | InterruptedException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            throw new CommonException("gemini 서버와 통신에 실패했습니다.", e);
         }
     }
 }

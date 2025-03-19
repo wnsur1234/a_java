@@ -20,11 +20,16 @@ public class Index {
             MusicCoordinator coordinator = new MusicCoordinator();
             Song song = coordinator.recommend(input);
             
+            if(song == null){
+                System.out.println("서버에 문제가 생겼어요!");
+                continue;
+            }
+            
+            System.out.println("\n====== AI 답변 ======\n");
             System.out.println("추천하는 곡은 " + song.title() + " 입니다.");
             System.out.println(song.reason());
             System.out.println("생성된 QR 코드를 통해 음악을 감상하세요!");
             
         }
     }
-    
 }
