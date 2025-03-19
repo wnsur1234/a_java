@@ -1,10 +1,10 @@
 package com.grepp.llm.error;
 
-public class CommonException extends RuntimeException {
-    public CommonException(String message) {
+public class LLMException extends RuntimeException {
+    public LLMException(String message) {
         super(message);
     }
-    public CommonException(String message, Throwable cause) {
+    public LLMException(String message, Throwable cause) {
         super(message, cause);
     }
 }

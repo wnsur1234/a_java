@@ -1,11 +1,9 @@
-package com.grepp.mc.infra.llm.gemini.text;
+package com.grepp.llm.gemini.text;
 
-import com.google.gson.Gson;
-import com.grepp.mc.infra.error.CommonException;
-import com.grepp.mc.infra.llm.ChatModel;
-import com.grepp.mc.infra.llm.Request;
-import com.grepp.mc.infra.llm.Response;
-import com.grepp.mc.infra.llm.gemini.text.vo.ResponseDocument;
+import com.grepp.llm.ChatModel;
+import com.grepp.llm.Request;
+import com.grepp.llm.Response;
+import com.grepp.llm.error.LLMException;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -52,14 +50,14 @@ public class GeminiChatModel implements ChatModel {
             HttpResponse<String> response = client.send(requestClient, BodyHandlers.ofString());
             
             if(response.statusCode() != 200){
-                throw new CommonException(response.body());
+                throw new LLMException(response.body());
             }
             
             return new TextResponse(response.body());
             
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
-            throw new CommonException("gemini 서버와 통신에 실패했습니다.", e);
+            throw new LLMException("gemini 서버와 통신에 실패했습니다.", e);
         }
     }
 }

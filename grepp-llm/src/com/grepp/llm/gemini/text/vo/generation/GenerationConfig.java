@@ -1,4 +1,4 @@
-package com.grepp.mc.infra.llm.gemini.text.vo.generation;
+package com.grepp.llm.gemini.text.vo.generation;
 
 import com.google.gson.annotations.SerializedName;
 

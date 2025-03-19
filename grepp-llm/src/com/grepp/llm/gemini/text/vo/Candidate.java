@@ -1,4 +1,4 @@
-package com.grepp.mc.infra.llm.gemini.text.vo;
+package com.grepp.llm.gemini.text.vo;
 
 public record Candidate(
     Content content,

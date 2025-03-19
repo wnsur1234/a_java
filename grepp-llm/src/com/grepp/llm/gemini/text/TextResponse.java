@@ -1,10 +1,10 @@
-package com.grepp.mc.infra.llm.gemini.text;
+package com.grepp.llm.gemini.text;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.grepp.mc.infra.llm.Response;
-import com.grepp.mc.infra.llm.gemini.text.vo.ResponseDocument;
+import com.grepp.llm.Response;
+import com.grepp.llm.gemini.text.vo.ResponseDocument;
 import java.util.List;
 import java.util.Map;
 
