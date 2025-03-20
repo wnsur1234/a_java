@@ -95,6 +95,19 @@ public class _LinkedList<E> implements _List<E>{
 
         return false;
     }
+    
+    @Override
+    public String toString(){
+        StringBuffer sb = new StringBuffer();
+        sb.append("[");
+        sb.append(get(0));
+        for (int i = 1; i < size(); i++) {
+            sb.append(", ").append(get(i));
+        }
+        
+        sb.append("]");
+        return sb.toString();
+    }
 
 
     @Override

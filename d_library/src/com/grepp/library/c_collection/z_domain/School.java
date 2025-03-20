@@ -35,7 +35,12 @@ public class School implements Comparable<School> {
         // 0. 학교레벨을 기준으로 내림차순 정렬
         // 1. 학교명으로 오름차순(a,b,c)  정렬될 수 있도록 기준을 변경
         // 2. 학교레벨로 오름차순 정렬하되, 만약 레벨이 같다면 학교명으로 내림차순 정렬(ㅎ,ㅍ,ㅌ)
-        return this.level - o.level;
+        
+        if(level.equals(o.level)) {
+            return -(name.compareTo(o.name));
+        }
+        
+        return level.compareTo(o.level);
     }
 
     @Override

@@ -16,12 +16,12 @@ public class Run {
         // NOTE B01 : CRUD
         // 데이터를 조작하는 방법
         // Create, Read, Update, Delete
-         //pracAdd();
-         //pracGet();
-         //pracSet();
-         //pracRemove();
+//         pracAdd();
+//         pracGet();
+//         pracSet();
+//         pracRemove();
          pracSort();
-        //practIterable();
+//         practIterable();
     }
 
     private static void practIterable() {
@@ -49,8 +49,8 @@ public class Run {
         List<School> schools = new ArrayList<>(List.of(seoul, yeonsae, minsa, grepp, semyoung));
         List<Integer> nums = new ArrayList<>(List.of(13, 165, 22, 323, 11, 988, 443)) ;
 
-        Collections.sort(nums);
-        System.out.println(nums);
+        Collections.sort(schools);
+        System.out.println(schools);
         Collections.sort(schools, (a ,b) -> a.getName().compareTo(b.getName()));
         System.out.println(schools);
     }

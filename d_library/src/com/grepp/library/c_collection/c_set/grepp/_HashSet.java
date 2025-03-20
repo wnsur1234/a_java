@@ -1,7 +1,9 @@
 package com.grepp.library.c_collection.c_set.grepp;
 
 import com.grepp.library.c_collection.b_list.grepp._LinkedList;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 @SuppressWarnings("unchecked")
 public class _HashSet<E> implements Iterable<E>{
@@ -94,19 +96,11 @@ public class _HashSet<E> implements Iterable<E>{
 
     @Override
     public String toString() {
-        StringBuffer sb = new StringBuffer();
-        sb.append("[");
-
-        for(int i = 0; i < elementData.length; i++){
-            if(elementData[i] == null) continue;
-            _LinkedList<E> row = (_LinkedList<E>) elementData[i];
-            for (E e : row) {
-                sb.append(e).append(", ");
-            }
+        List<E> list = new ArrayList<>();
+        for (E e : this) {
+            list.add(e);
         }
-
-        sb.append("]");
-        return sb.toString();
+        return list.toString();
     }
 
 
