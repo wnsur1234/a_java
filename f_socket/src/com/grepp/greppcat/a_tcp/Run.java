@@ -13,7 +13,7 @@ public class Run {
                 "/qrcode", new QrCodeController(),
                 "/", new IndexController()
             ));
-        new TcpServer(8989).start();
+        new TcpServer(8989,160).start();
     }
 
 }

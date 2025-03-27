@@ -16,60 +16,27 @@ import java.net.Socket;
 
 public class TcpServer {
     
-    private final int port;
     private ServerSocket serverSocket;
+    private ThreadPool threadPool;
     
-    public TcpServer(int port) {
-        this.port = port;
+    public TcpServer(int port, int threadCnt) {
         try {
             serverSocket = new ServerSocket(port);
+            threadPool = ThreadPool.init(threadCnt);
+            
+            System.out.println("server start(port : " + port + ")" );
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
     
     public void start(){
-        System.out.println("system : 서버 실행");
-        HandlerMapping mapper = new HandlerMapping();
-        HandlerAdapter adapter = new HandlerAdapter();
-        
-        // http server 특징 stateless
-        // 클라이언트의 상태를 저장하지 않는다.
         while(true){
-            try(
-                // 클라이언트의 최초 요청이 도착하면
-                // 클라이언트와 1:1 통신을 하기 위한 소켓을 생성
-                Socket socket = serverSocket.accept();
-                BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                PrintWriter writer = new PrintWriter(socket.getOutputStream());
-                BufferedOutputStream bos = new BufferedOutputStream(socket.getOutputStream());
-            ){
-            
-                String startLine = reader.readLine();
-                if(startLine == null) continue;
-                
-                HttpRequest request = new RequestParser().parse(startLine, reader);
-                Servlet servlet = mapper.getHandler(request);
-                HttpResponse response = adapter.handle(request, servlet);
-                
-                sendResponseHeader(response, writer);
-                sendResponseBody(response, bos);
-
+            try{
+                threadPool.addTask(serverSocket.accept());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
-    }
-    
-    private void sendResponseBody(HttpResponse response, BufferedOutputStream bos)
-        throws IOException {
-        bos.write(response.body().getBody());
-        bos.flush();
-    }
-    
-    private void sendResponseHeader(HttpResponse response, PrintWriter writer) {
-        writer.print(response.startLine());
-        writer.print(response.httpHeader());
-        writer.flush();
     }
 }

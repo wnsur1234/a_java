@@ -14,7 +14,7 @@ public enum ResponseStartLine {
     private final String statusMessage;
     
     ResponseStartLine(int statusCode, String statusMessage) {
-        this.version = "http/1.1";
+        this.version = "HTTP/1.1";
         this.statusCode = statusCode;
         this.statusMessage = statusMessage;
     }
