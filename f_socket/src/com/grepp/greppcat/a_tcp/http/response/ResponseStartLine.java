@@ -21,6 +21,6 @@ public enum ResponseStartLine {
     
     @Override
     public String toString() {
-        return version + " " + statusCode + " " + statusMessage;
+        return version + " " + statusCode + " " + statusMessage + "\n";
     }
 }

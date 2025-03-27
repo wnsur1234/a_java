@@ -1,11 +1,13 @@
 package com.grepp.greppcat.a_tcp;
 
-import com.grepp.greppcat.a_tcp.domain.QrCode;
 import com.grepp.greppcat.a_tcp.http.request.HttpRequest;
 import com.grepp.greppcat.a_tcp.http.request.RequestParser;
+import com.grepp.greppcat.a_tcp.http.response.HttpResponse;
+import com.grepp.greppcat.a_tcp.servlet.HandlerAdapter;
+import com.grepp.greppcat.a_tcp.servlet.HandlerMapping;
+import com.grepp.greppcat.a_tcp.servlet.Servlet;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -28,6 +30,8 @@ public class TcpServer {
     
     public void start(){
         System.out.println("system : 서버 실행");
+        HandlerMapping mapper = new HandlerMapping();
+        HandlerAdapter adapter = new HandlerAdapter();
         
         // http server 특징 stateless
         // 클라이언트의 상태를 저장하지 않는다.
@@ -45,31 +49,27 @@ public class TcpServer {
                 if(startLine == null) continue;
                 
                 HttpRequest request = new RequestParser().parse(startLine, reader);
+                Servlet servlet = mapper.getHandler(request);
+                HttpResponse response = adapter.handle(request, servlet);
                 
-                if(request.startLine().url().equals("/favicon.ico")) {
-                    writer.println("HTTP/1.1 200 OK");
-                    writer.println("\n");
-                    continue;
-                }
-                
-                QrCode qrcode = new QrCode();
-                qrcode.doGet(request);
-                
-                writer.print("HTTP/1.1 200 OK \n");
-                writer.print("Content-Type: image/png \n");
-                writer.print("\n");
-                writer.flush();
-                String filename = request.param().get("name").getFirst();
-                
-                try(FileInputStream fis = new FileInputStream(filename)){
-                    bos.write(fis.readAllBytes());
-                }
-                
-                bos.flush();
+                sendResponseHeader(response, writer);
+                sendResponseBody(response, bos);
 
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
+    }
+    
+    private void sendResponseBody(HttpResponse response, BufferedOutputStream bos)
+        throws IOException {
+        bos.write(response.body().getBody());
+        bos.flush();
+    }
+    
+    private void sendResponseHeader(HttpResponse response, PrintWriter writer) {
+        writer.print(response.startLine());
+        writer.print(response.httpHeader());
+        writer.flush();
     }
 }

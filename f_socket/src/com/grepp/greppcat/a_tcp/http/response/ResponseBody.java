@@ -8,8 +8,9 @@ public class ResponseBody {
         this.body = new byte[0];
     }
     
-    public void addBody(byte[] bytes){
+    public ResponseBody addBody(byte[] bytes){
         this.body = bytes;
+        return this;
     }
     
     public byte[] getBody() {
