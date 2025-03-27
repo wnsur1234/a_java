@@ -15,5 +15,11 @@ public class RequestParameter extends MultiValueMap<String, String> {
     public Optional<List<String>> getParameter(String name){
         return Optional.ofNullable(super.get(name));
     }
-
+    
+    @Override
+    public String toString() {
+        return "RequestParameter{" +
+                   "data=" + data +
+                   '}';
+    }
 }

@@ -31,4 +31,11 @@ public class MultiValueMap<K, V> {
     public Set<Entry<K, List<V>>> entrySet(){
         return data.entrySet();
     }
+    
+    @Override
+    public String toString() {
+        return "MultiValueMap{" +
+                   "data=" + data +
+                   '}';
+    }
 }

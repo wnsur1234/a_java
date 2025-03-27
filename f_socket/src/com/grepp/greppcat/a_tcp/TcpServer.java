@@ -1,12 +1,16 @@
 package com.grepp.greppcat.a_tcp;
 
+import com.grepp.greppcat.a_tcp.domain.QrCode;
+import com.grepp.greppcat.a_tcp.http.request.HttpRequest;
+import com.grepp.greppcat.a_tcp.http.request.RequestParser;
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Arrays;
 
 public class TcpServer {
     
@@ -34,28 +38,34 @@ public class TcpServer {
                 Socket socket = serverSocket.accept();
                 BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 PrintWriter writer = new PrintWriter(socket.getOutputStream());
+                BufferedOutputStream bos = new BufferedOutputStream(socket.getOutputStream());
             ){
             
                 String startLine = reader.readLine();
                 if(startLine == null) continue;
                 
+                HttpRequest request = new RequestParser().parse(startLine, reader);
                 
+                if(request.startLine().url().equals("/favicon.ico")) {
+                    writer.println("HTTP/1.1 200 OK");
+                    writer.println("\n");
+                    continue;
+                }
                 
+                QrCode qrcode = new QrCode();
+                qrcode.doGet(request);
                 
-                
-                
-
-//                String headerLine = reader.readLine();
-//                while(!headerLine.isEmpty()){
-//                    System.out.println(headerLine);
-//                    headerLine = reader.readLine();
-//                }
-                
-                writer.println("HTTP/1.1 200 OK");
-                writer.println("\n");
-                writer.println("<h1>hello world</h1>");
-                
+                writer.print("HTTP/1.1 200 OK \n");
+                writer.print("Content-Type: image/png \n");
+                writer.print("\n");
                 writer.flush();
+                String filename = request.param().get("name").getFirst();
+                
+                try(FileInputStream fis = new FileInputStream(filename)){
+                    bos.write(fis.readAllBytes());
+                }
+                
+                bos.flush();
 
             } catch (IOException e) {
                 throw new RuntimeException(e);
