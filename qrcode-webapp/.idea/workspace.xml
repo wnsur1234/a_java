@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="75542725-0934-4897-b727-5df2e8473b07" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../greppcat/greppcat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/TcpServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/ThreadPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/exception/ServletInitializeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/http/HttpHeader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/http/HttpMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/http/request/HttpRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/http/request/RequestParameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/http/request/RequestParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/http/request/RequestStartLine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/http/response/HttpResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/http/response/ResponseBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/http/response/ResponseStartLine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/servlet/HandlerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/servlet/HandlerMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/servlet/NotFoundServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/servlet/Servlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/servlet/ServletContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/servlet/ServletStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/servlet/annotation/EndPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/servlet/annotation/RequestMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greppcat/src/com/grepp/greppcat/util/MultiValueMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qrcode-webapp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/grepp/greppcat/Run.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/grepp/greppcat/domain/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/grepp/greppcat/domain/QrCodeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/grepp/greppcat/util/QrCodeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/e_thread.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/a_thread/Run.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/a_thread/_Thread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/a_thread/runnable/RunnableImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/b_control/Run.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/b_control/_Counter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/b_control/_Interrupter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/b_control/connectionpool/Connection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/b_control/connectionpool/ConnectionPool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/b_control/connectionpool/Run.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/b_control/connectionpool/Worker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/c_threadsafe/Bottle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/c_threadsafe/Coffee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/c_threadsafe/Run.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/c_threadsafe/Soi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/d_deadlock/Run.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/d_deadlock/character/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/d_deadlock/space/Destination.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/d_deadlock/space/Home.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/d_deadlock/space/School.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/d_deadlock/transport/Bus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/e_solution/Run.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/e_solution/character/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/e_solution/space/Destination.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/e_solution/space/Home.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/e_solution/space/School.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../a_thread/src/com/grepp/thread/e_solution/transport/Bus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_socket/src/com/grepp/greppcat/d_greppcap/domain/QrCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../f_socket/src/com/grepp/greppcat/d_greppcap/domain/QrCodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_socket/src/com/grepp/greppcat/d_greppcap/http/request/RequestParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../f_socket/src/com/grepp/greppcat/d_greppcap/http/request/RequestParser.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2uvcxIFDdUfUvhtNiquvixyFlI3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Run.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/backend/a_java/qrcode-webapp/src/com/grepp/greppcat",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\backend\a_java\qrcode-webapp\src\com\grepp\greppcat" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.grepp.greppcat.util" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.grepp.greppcat.Run" />
+      <module name="qrcode-webapp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.grepp.greppcat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Run" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.19416.15" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.19416.15" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="75542725-0934-4897-b727-5df2e8473b07" name="Changes" comment="" />
+      <created>1743132733693</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743132733693</updated>
+      <workItem from="1743132734721" duration="1128000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
