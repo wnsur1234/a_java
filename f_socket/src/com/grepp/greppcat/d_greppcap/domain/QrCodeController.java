@@ -27,7 +27,8 @@ public class QrCodeController implements Servlet {
 
             return new HttpResponse(
                 ResponseStartLine.OK,
-                new HttpHeader(),
+                new HttpHeader()
+                    .add("Content-Disposition", "attachment; filename=" + filename),
                 new ResponseBody().addBody(bos.toByteArray())
             );
             

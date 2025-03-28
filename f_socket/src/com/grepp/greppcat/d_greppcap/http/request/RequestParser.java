@@ -11,9 +11,11 @@ public class RequestParser {
         RequestStartLine startLine = parseStartLine(line);
         HttpHeader header = parseHttpHeader(reader);
         RequestParameter param = new RequestParameter();
+        parseQueryString(startLine.queryString(), param);
         
-        if(startLine.method().equals(HttpMethod.GET)){
-            param = parseQueryString(startLine.queryString());
+        HttpMethod requestMethod = startLine.method();
+        if(requestMethod.equals(HttpMethod.POST) || requestMethod.equals(HttpMethod.PUT)) {
+            parseRequestBody(param, header, reader);
         }
         
         return new HttpRequest(startLine, header, param);
@@ -31,16 +33,13 @@ public class RequestParser {
         return header;
     }
     
-    private RequestParameter parseQueryString(String queryString) {
-        RequestParameter param = new RequestParameter();
-        if(queryString.isEmpty()) return param;
+    private void parseQueryString(String queryString, RequestParameter param) {
+        if(queryString.isEmpty()) return;
         
         String[] paramTokens = queryString.split("&");
         for(String paramToken : paramTokens){
             param.add(paramToken);
         }
-        
-        return param;
     }
     
     private RequestStartLine parseStartLine(String line) {
@@ -69,5 +68,21 @@ public class RequestParser {
             queryString,
             version
         );
+    }
+    
+    private void parseRequestBody(RequestParameter param, HttpHeader header, BufferedReader reader)
+        throws IOException {
+        
+        int contentLength = Integer.parseInt(
+            header.getHeader("Content-Length").getFirst().trim()
+        );
+        
+        char[] bodyData = new char[contentLength];
+        reader.read(bodyData, 0, contentLength);
+        String bodyTxt = String.valueOf(bodyData);
+        
+        if (!bodyTxt.isEmpty()) {
+            parseQueryString(bodyTxt, param);
+        }
     }
 }
