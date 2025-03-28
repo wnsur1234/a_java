@@ -6,7 +6,10 @@ public class HandlerMapping {
 
     public Servlet getHandler(HttpRequest request){
         ServletStorage storage = ServletStorage.getInstance();
-        Servlet servlet = storage.getServlet(request.startLine().url());
+        
+        Servlet servlet = storage.getServlet(
+            request.startLine().url().replaceFirst("/", ""));
+        
         if(servlet == null) return new NotFoundServlet();
         return servlet;
     }

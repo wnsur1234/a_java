@@ -8,6 +8,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.lang.reflect.InvocationTargetException;
 import java.net.Socket;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -47,7 +48,7 @@ public class ServletContainer implements Runnable {
                 sendResponseHeader(response, writer);
                 sendResponseBody(response, bos);
                 
-            } catch (IOException e) {
+            } catch (IOException | IllegalAccessException | InvocationTargetException e) {
                 throw new RuntimeException(e);
             } catch (InterruptedException ignored) { }
         }

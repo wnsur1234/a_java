@@ -8,7 +8,6 @@ import com.grepp.greppcat.d_greppcap.http.response.ResponseStartLine;
 
 public class NotFoundServlet implements Servlet {
     
-    @Override
     public HttpResponse doGet(HttpRequest request) {
         return new HttpResponse(
             ResponseStartLine.NOT_FOUND,
@@ -17,7 +16,6 @@ public class NotFoundServlet implements Servlet {
         );
     }
     
-    @Override
     public HttpResponse doPost(HttpRequest request) {
         return new HttpResponse(
             ResponseStartLine.NOT_FOUND,

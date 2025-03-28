@@ -45,8 +45,7 @@ public class ServletStorage {
             
             if(servletMap.containsKey(url))
                 throw new ServletInitializeException(servlet.getClass().getCanonicalName()
-                                                         + requestMapping.url() + " is already registered");
-            
+                                                        + " : " + requestMapping.url() + " is already registered");
             servletMap.put(url, servlet);
         }
         
@@ -55,7 +54,7 @@ public class ServletStorage {
     }
     
     public Servlet getServlet(String url){
-        return servlets.get(url);
+        return servlets.get(url.split("/")[0]);
     }
     
 }
