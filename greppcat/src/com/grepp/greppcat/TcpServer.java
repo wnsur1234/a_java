@@ -1,4 +1,4 @@
-package com.grepp.greppcat.d_greppcap;
+package com.grepp.greppcat;
 
 import java.io.IOException;
 import java.net.ServerSocket;

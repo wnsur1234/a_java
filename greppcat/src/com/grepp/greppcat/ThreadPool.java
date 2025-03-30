@@ -1,6 +1,6 @@
-package com.grepp.greppcat.d_greppcap;
+package com.grepp.greppcat;
 
-import com.grepp.greppcat.d_greppcap.servlet.ServletContainer;
+import com.grepp.greppcat.servlet.ServletContainer;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
